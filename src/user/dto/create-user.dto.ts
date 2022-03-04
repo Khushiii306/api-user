@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
   IsAlpha,
-  IsAlphanumeric,
+  IsAlphanumeric, IsBoolean,
   IsDateString,
   IsEmail,
   IsString,
@@ -32,4 +32,8 @@ export class CreateUserDto {
 
   @ApiProperty()
   password: string;
+
+  @ApiProperty()
+  @IsBoolean()
+  isDeleted: boolean;
 }

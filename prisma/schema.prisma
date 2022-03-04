@@ -21,4 +21,5 @@ model users{
   username String  @unique
   dob String
   password String
+  isDeleted Boolean @default(false)
 }
